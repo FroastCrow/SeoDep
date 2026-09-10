@@ -1,0 +1,1110 @@
+/* Catalog item card — block inside .agencyBlock */
+/* Filters bar above catalog */
+
+.filterWrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.filterWrap .searchBtn {
+  width: 35px;
+  height: 35px;
+}
+
+.filterWrap .searchBtn .iconSearchArrow {
+  display: inline-flex;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+.filterBar {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filterField {
+  position: relative;
+  min-width: 150px;
+}
+
+.filterField .searchBlock {
+  max-width: 206px;
+}
+
+.filterDropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  padding: 10px 10px 6px;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: var(--basic-shadow);
+  z-index: 25;
+  display: none;
+}
+
+.filterField.is-open .filterDropdown {
+  display: block;
+}
+
+.filterDropdownList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.filterDropdownList li {
+  padding: 6px 8px;
+  border-radius: 10px;
+  font-size: 15px;
+  color: var(--color-default-medium);
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.filterDropdownList li:hover {
+  background: var(--color-bg-hover);
+}
+
+.filterDropdownList li:last-child {
+  margin-bottom: 0;
+}
+
+.filterApplyBtn {
+  max-width: 242px;
+  padding: 12px 20px;
+}
+
+.filterApplyBtn:active {
+  box-shadow: 0 10px 24px rgba(147, 99, 255, 0.55);
+}
+
+.separateBlock .filterBar {
+  flex-direction: column;
+  width: 100%;
+}
+
+.separateBlock .filterField {
+  width: 100%;
+}
+
+.separateBlock .filterField .searchBlock {
+  max-width: 100%;
+}
+
+.companySection {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.separateBlock .companySection {
+  flex-direction: column;
+  gap: 30px;
+}
+
+.separateBlock .companyMeta .metaList {
+  flex-direction: row;
+  gap: 20px;
+}
+
+.companyRow {
+  display: flex;
+  gap: 30px;
+}
+
+.companyInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.companyLogo img {
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.companyMeta {
+  max-width: 525px
+}
+
+.companyMeta .metaList {
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+}
+
+.companyMeta .metaIco {
+  margin-right: 5px;
+}
+
+.companyDesc {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  letter-spacing: -1px;
+  font-size: 18px;
+}
+
+.companyDesc p {
+  margin: 0;
+}
+
+.companyDesc .listBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.companyDesc .listTitle {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.companyDesc .listSlogan {
+  font-size: 18px;
+  font-style: italic;
+}
+
+.companyDesc .listBlock ol {
+  list-style: decimal;
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+}
+.companyDesc .listBlock ul {
+  list-style: disc;
+  margin: 0;
+  padding-inline-start: 30px;
+}
+
+.companyDesc .listBlock p {
+  margin-top: 10px;
+}
+
+.companyDesc .listBlock ol li::marker {
+  font-weight: 600;
+}
+
+.companyDesc .listBlock ul li,
+.companyDesc .listBlock ol li {
+  margin-bottom: 10px;
+}
+
+.companyDesc .listBlock ul li:last-child,
+.companyDesc .listBlock ol li:last-child {
+  margin-bottom: 0;
+}
+
+.companyDesc .listBlock ul li strong,
+.companyDesc .listBlock ul li b,
+.companyDesc .listBlock ol li b,
+.companyDesc .listBlock ol li strong {
+  font-weight: 600;
+}
+
+.catalogSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 33px;
+  margin-top: 33px;
+}
+
+.catalogList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.agencyBlock {
+  display: flex;
+  gap: 30px;
+  padding: 22px 20px;
+  border-radius: 28px;
+  background: var(--color-white);
+}
+
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.logoCircle {
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.moreBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 11px;
+  border-radius: var(--radius-card);
+  background: #F8F9FB;
+  color: var(--color-accent);
+  font-size: 16px;
+  transition: all .3s ease;
+  letter-spacing: -1px;
+}
+
+.moreBtn:hover {
+  background: var(--color-accent);
+  color: var(--color-white);
+}
+
+.rightCol .moreBtn {
+  display: none;
+}
+
+.rightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.agencyName,
+.companyName {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--color-default);
+  letter-spacing: -1px;
+}
+
+.companyName a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+}
+
+.companyName a::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: 0px;
+  background: var(--color-default);
+  transform-origin: right center;
+  transform: scaleX(0);
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0, 1);
+}
+
+.companyName a:hover::after {
+  transform: scaleX(1);
+  transform-origin: center left;
+}
+
+.slogan {
+  margin: 0;
+  font-size: 18px;
+  color: var(--color-default-soft);
+  letter-spacing: -1px;
+}
+
+.ratingRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.starsWrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ratingText {
+  font-size: 16px;
+}
+
+.rightCol .desc {
+  margin: 0;
+  font-size: 16px;
+  letter-spacing: -1px;
+}
+
+.metaList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: #222222BF;
+  letter-spacing: -1px;
+}
+
+.metaItemPrice {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.innerItem {
+  display: inline-flex;
+  align-items: center;
+}
+
+.metaIco {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+}
+
+/* article page START */
+.articleSection {
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+}
+
+.articleWrap {
+  display: flex;
+  gap: 33px;
+}
+
+.articleGrid {
+  display: grid;
+  grid-template-columns: 3fr 1.25fr;
+  gap: 33px;
+}
+
+.articleBlock.flexBlock {
+  display: flex;
+  flex-direction: row;
+}
+
+.articleBlock {
+  padding: 30px;
+  gap: 50px;
+  flex: 1;
+}
+
+.articleBlock .articleInner {
+  max-width: 266px;
+}
+
+.articleBlock .contentTitle {
+  margin-bottom: 15px;
+  font-size: 22px;
+  letter-spacing: -1px;
+}
+
+.articleBlock .articleInner .articleText {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.articleBlock .articleText p {
+  font-size: 18px;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+.articleBlock .sliderHeader {
+  margin-bottom: 30px;
+}
+
+.swiper .agencyBlock {
+  flex-direction: column;
+  gap: 11px;
+}
+
+.agencyTopRow {
+  display: flex;
+  gap: 15px;
+}
+
+.agencyLogo img {
+  height: 75px;
+  width: 75px;
+}
+
+.agencyInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.agencyInfo .agencyName {
+  font-size: 22px;
+}
+
+.agencyInfo .slogan {
+  font-size: 16px;
+}
+
+.agencyInfo .starsWrap img {
+  width: 18px;
+  height: 18px;
+}
+
+.agencyInfo .ratingText {
+  font-size: 14px;
+}
+
+.agencyBotRow .desc {
+  margin-bottom: 10px;
+}
+
+.agencyBotRow .desc p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.agencyBotRow .metaList {
+  flex-flow: row wrap;
+  gap: 10px 20px;
+}
+
+/* Теги-пілюлі в картках статті */
+.articleBlock .tagList {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.articleBlock .tagList.horizontal {
+  flex-direction: row;
+  align-items: center;
+}
+
+.articleBlock .tag {
+  display: inline-block;
+  padding: 8px 17px;
+  border-radius: var(--radius-card);
+  font-size: 18px;
+  letter-spacing: -1px;
+  border: 1px solid var(--color-grid);
+}
+
+.articleBlock .tagGroup {
+  margin-bottom: 15px;
+}
+
+.articleBlock .tagGroup:last-child {
+  margin-bottom: 0;
+}
+
+.articleBlock .groupTitle {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: var(--color-default-soft);
+}
+
+/* Історії успіху — акордеон */
+.storyList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.storyItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.storyItem .storyTrigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding: 20px 40px;
+  text-align: left;
+  background: var(--color-bg-page-soft);
+  border-radius: var(--radius-card);
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.storyItem .triggerContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  letter-spacing: -1px;
+}
+
+.storyTitle {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-default);
+  margin: 0 0 6px;
+}
+
+.storyMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.storyMeta .metaItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 15px;
+  color: var(--color-default-medium);
+}
+
+.storyMeta .metaIco {
+  margin-right: 0;
+}
+
+.storyChevron {
+  width: 15px;
+  color: var(--color-default-soft);
+  transition: transform 0.3s ease, color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.storyContent {
+  display: none;
+  padding: 20px 40px;
+  background: var(--color-bg-page-soft);
+  border-radius: var(--radius-card);
+  font-size: 18px;
+  color: var(--color-default);
+}
+
+.storyContent h3 {
+  margin: 0 0 10px;
+  font-weight: 500;
+}
+
+.storyContent p {
+  margin: 0 0 20px;
+}
+
+.storyItem.open .storyContent {
+  display: block;
+}
+
+.storyItem.open .storyTrigger {
+  background: var(--color-bg-page);
+}
+
+.storyItem.open .storyChevron {
+  transform: rotate(180deg);
+}
+
+/* Сітка відгуків */
+.reviewGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 33px;
+  margin-top: 20px;
+}
+
+.reviewCard {
+  padding: 20px;
+  background: var(--color-bg-soft);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  letter-spacing: -1px;
+}
+
+.reviewTopRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.authorBlock {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.authorInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.authorInfo .reviewDate {
+  font-size: 16px;
+  color: var(--color-default-soft);
+}
+
+.reviewSource {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 15px;
+  color: var(--color-default-thin);
+  
+}
+
+.reviewSource img {
+  width: 83px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.reviewAvatar img {
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.reviewContent {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.authorInfo .reviewAuthor {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.reviewCard .ratingRow {
+  margin-bottom: 8px;
+}
+
+.reviewContent p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.reviewLoadBtn {
+  margin-top: 24px;
+  text-align: center;
+}
+
+/* Клієнти / нагороди — сітка логотипів */
+.logosGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  align-items: center;
+}
+
+.logosGrid img {
+  height: 141px;
+  width: 141px;
+  object-fit: contain;
+}
+
+/* Таблица "Формат сотрудничества" */
+.coopTable {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.coopTable::-webkit-scrollbar {
+  display: none;
+}
+
+.coopTable table thead {
+  background: var(--color-bg-page-soft);
+}
+
+.coopTable table tbody tr:nth-child(odd) td {
+  background: transparent;
+}
+
+.coopTable table th,
+.coopTable table td {
+  padding: 14px 18px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.coopTable table th {
+  font-weight: 600;
+  color: var(--color-default-soft);
+}
+
+.coopTable table thead th:first-child {
+  width: 280px;
+}
+
+.coopTable table thead th:nth-child(2) {
+  width: 480px;
+}
+
+.coopTable table tbody tr:nth-child(even) {
+  background: var(--color-bg-soft);
+}
+
+.coopTable table tbody td:first-child {
+  color: var(--color-default);
+}
+
+.coopTable table thead th:first-child {
+  border-radius: var(--radius-card) 0 0 var(--radius-card);
+}
+
+.coopTable table thead tr th:last-child {
+  border-radius: 0 var(--radius-card) var(--radius-card) 0;
+}
+
+.coopTable table thead tr:first-child th {
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-default);
+}
+
+
+/* Кнопка outline для картки профілю */
+.articleBlock .btn.outline {
+  background: transparent;
+  border: 2px solid var(--color-default);
+  color: var(--color-default);
+}
+
+.articleBlock .btn.outline:hover {
+  background: var(--color-default);
+  color: var(--color-white);
+}
+
+/* article page END */
+
+@media (max-width: 1024px) {
+  .articleBlock {
+    padding: 20px;
+  }
+
+  .companyRow {
+    gap: 10px;
+  }
+
+  .companyLogo img {
+    width: 81px;
+    height: 81px;
+  }
+
+  .companyInfo .companyName {
+    font-size: 25px;
+  }
+
+  .companyInfo .slogan {
+    font-size: 17px;
+  }
+
+  .companyMeta {
+    max-width: 350px;
+  }
+
+  .logosGrid img {
+    width: 84px;
+    height: 84px;
+  }
+
+  .articleBlock .contentTitle {
+    font-size: 19px;
+  }
+
+  .articleBlock .tag {
+    font-size: 16px;
+  }
+
+  .articleBlock .articleText p {
+    font-size: 16px;
+  }
+
+  .articleGrid {
+    gap: 20px;
+    grid-template-columns: 1fr;
+  }
+
+  .storyTitle {
+    font-size: 16px;
+  }
+
+  .storyContent {
+    font-size: 16px;
+  }
+
+  .reviewGrid {
+    gap: 20px;
+  }
+
+  .reviewCard .starsWrap img {
+    width: 15px;
+    height: 15px;
+  }
+
+  .reviewAvatar img {
+    width: 59px;
+    height: 59px;
+  }
+
+  .reviewSource img {
+    width: 58px;
+    height: 20px;
+  }
+
+  .reviewContent p {
+    font-size: 16px;
+  }
+
+  .authorBlock {
+    gap: 14px;
+  }
+
+  .authorInfo {
+    gap: 5px;
+  }
+
+  .authorInfo .reviewDate {
+    font-size: 13px;
+  }
+
+  .authorInfo .reviewAuthor {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .companySection {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .companyRow {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .companyInfo {
+    width: 100%;
+  }
+
+  .companyMeta {
+    max-width: 100%;
+  }
+
+  .companyMeta .metaList {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .companyInfo {
+    gap: 5px;
+  }
+
+  .companyInfo .companyName {
+    font-size: 22px;
+  }
+
+  .companyDesc {
+    gap: 20px;
+  }
+  
+  .companyDesc p {
+    font-size: 16px;
+  }
+
+  .articleWrap {
+    flex-direction: column;
+  }
+
+  .articleSection {
+    gap: 20px;
+  }
+
+  .articleBlock {
+    gap: 20px;
+  }
+
+  .articleBlock.flexBlock {
+    flex-direction: column;
+  }
+
+  .articleBlock .tagList.horizontal {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .reviewGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .reviewCard {
+    padding: 10px;
+    border-radius: 18px;
+  }
+
+  .reviewContent p {
+    font-size: 14px;
+  }
+
+  .reviewLoadBtn .btn {
+    width: 100%;
+  }
+
+  .filterBar {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .filterField {
+    width: 100%;
+  }
+
+  .filterField .searchBlock {
+    max-width: 100%;
+  }
+
+  .filterApplyBtn {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .agencyBlock {
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .rightCol .moreBtn {
+    display: inline-flex;
+  }
+
+  .leftCol .moreBtn {
+    display: none;
+  }
+
+  .leftCol {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .agencyName,
+  .companyName {
+    font-size: 25px;
+  }
+
+  .slogan {
+    font-size: 17px;
+  }
+
+  .ratingText {
+    font-size: 15px;
+  }
+
+  .rightCol .desc {
+    font-size: 15px;
+  }
+
+  .metaItem {
+    font-size: 14px;
+  }
+
+  .metaItemPrice {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .coopTable table {
+    min-width: 990px;
+  }
+  
+  .coopTable table thead th:first-child{
+    width: 200px;
+  }
+
+  .coopTable table thead th:nth-child(2) {
+    width: 380px;
+  }
+
+  .storyItem .storyTrigger {
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .catalogSection {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .filterBar {
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 24px;
+  }
+
+  .filterField,
+  .filterApplyBtn {
+    width: 100%;
+  }
+
+  .articleBlock .sliderHeader,
+  .articleBlock .postSliderTrack {
+    margin-bottom: 10px;
+  }
+
+  .agencyTopRow {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .agencyTopRow .agencyLogo {
+    text-align: center;
+  }
+
+  .agencyLogo img {
+    width: 81px;
+    height: 81px;
+  }
+
+  .swiper .agencyBlock {
+    gap: 18px;
+  }
+
+  .agencyBotRow .desc {
+    margin-bottom: 18px;
+  }
+
+  .agencyBotRow .metaList {
+    gap: 18px;
+  }
+}
+
+

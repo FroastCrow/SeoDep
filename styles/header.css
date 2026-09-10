@@ -1,0 +1,279 @@
+/* Header module */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--color-white);
+  padding: 13px 12px;
+  box-shadow: var(--shadow-header);
+}
+
+.header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.header .logo {
+  max-width: 151px;
+  max-height: 48px;
+}
+
+.header .logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.burgerBtn {
+  display: none;
+}
+
+.burgerBtn .burger-ico {
+  display: block;
+}
+
+.burgerBtn .cross-ico {
+  display: none;
+}
+
+.headerRight.burger-open + .burgerBtn .burger-ico {
+  display: none;
+}
+
+.headerRight.burger-open + .burgerBtn .cross-ico {
+  display: block;
+}
+.headerRight {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.headerRight.burger-open {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  border-radius: 0 0 30px 30px;
+}
+
+.logo .text {
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+}
+
+.logo .accent {
+  color: var(--color-accent);
+  margin: 0 3px;
+}
+
+.nav {
+  font-size: 14px;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item.is-open .nav-caret {
+  transform: rotateZ(180deg);
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  transition: all 0.3s ease;
+  color: var(--color-default);
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: var(--color-accent);
+}
+
+.nav-link:hover .nav-arrow path {
+  fill: var(--color-accent);
+}
+
+.nav-link.active {
+  color: var(--color-accent);
+}
+
+.nav-caret {
+  margin-left: 4px;
+  font-size: 10px;
+}
+
+.nav-caret,
+.nav-arrow path {
+  transition: all 0.3s ease;
+}
+
+.nav-sub {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  min-width: 210px;
+  padding: 10px 0;
+  margin: 0;
+  list-style: none;
+  background: var(--color-white);
+  border-radius: 0 0 15px 15px;
+  box-shadow: var(--basic-shadow);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(6px);
+  transition: all 0.3s ease;
+  z-index: 15;
+}
+
+.nav-sub-link {
+  display: block;
+  padding: 8px 18px;
+  font-size: 14px;
+  color: var(--color-default);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav-sub-link:hover {
+  background: var(--color-bg-page-soft);
+  color: var(--color-accent);
+}
+
+.nav-item.is-open > .nav-sub {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.header .actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 25px;
+  border-radius: var(--radius-btn);
+  font-size: 14px;
+  background: #F8F9FB;
+  color: var(--color-accent);
+  transition: all 0.3s ease;
+}
+
+.header .link:hover {
+  color: var(--color-white);
+  background: var(--color-accent-hover);
+}
+
+.header .link:hover svg path {
+  fill: var(--color-white);
+}
+
+.header .btn {
+  min-width: 131px;
+  padding: 12px 10px;
+  border-radius: var(--radius-btn);
+  background: var(--color-accent);
+  color: var(--color-white);
+  font-size: 17px;
+  box-shadow: 0 14px 30px #F8F9FB;
+  transition: all 0.3s ease;
+}
+
+.header .btn:hover {
+  background: var(--color-accent-hover);
+}
+
+@media (max-width: 1024px) {
+  .burgerBtn {
+    display: flex;
+  }
+
+  .headerRight {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: var(--color-white);
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all 0.3s ease;
+    box-shadow: var(--basic-shadow);
+  }
+
+  .headerRight.burger-open {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    width: 100%;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    justify-self: flex-start;
+    align-items: flex-start;
+  }
+
+  .nav-sub {
+    position: relative;
+    box-shadow: none;
+    border-radius: 0;
+    height: 0;
+    padding: 0;
+  }
+
+  .nav-item.is-open > .nav-sub {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .header .actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .header .actions a,
+  .header .actions button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 568px) {
+  .header {
+    padding: 9px 0px;
+  }
+
+  .header .logo img {
+    max-height: 41px;
+  }
+}

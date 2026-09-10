@@ -1,0 +1,396 @@
+/* Profile page — карточка бренда (стилі через design tokens з main.css) */
+
+/* Breadcrumbs */
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  font-size: 16px;
+  color: var(--color-default);
+  margin-bottom: 16px;
+}
+
+.breadcrumbs a {
+  color: var(--color-accent);
+}
+
+.breadcrumbs a:hover {
+  color: var(--color-default);
+}
+
+.breadcrumbs .sep {
+  color: var(--color-default-soft);
+  user-select: none;
+}
+
+.breadcrumbs .current {
+  color: var(--color-default-soft);
+}
+
+/* Заголовок страницы */
+.profileTitle {
+  margin: 0 0 24px;
+  font-size: 33px;
+  font-weight: 700;
+  color: var(--color-default);
+}
+
+/* Сетка: колонка 1 — инфо + Search Volume; колонка 2 — оба keyword planner; колонка 3 — оба se ranking */
+.profileWrap {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  margin-bottom: 33px;
+}
+
+.profileWrap .leftGrid {
+    max-width: 368px;
+    width: 100%;
+}
+
+.profileWrap .rightGrid {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  gap: 22px;
+  width: 100%;
+}
+
+/* Общая карточка профиля */
+.profileCard {
+  padding: 10px 10px 20px 10px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  max-width: 229px;
+  width: 100%;
+}
+
+.profileCardTitle {
+  padding: 20px;;
+  font-size: 18px;
+  color: var(--color-default);
+  background: var(--color-bg-soft);
+  border-radius: 30px;
+}
+
+.profileCardTitleMain {
+  display: block;
+  font-weight: 700;
+}
+
+/* Инфо-карточка (Где/Когда найден) */
+.infoCard {
+  padding: 20px;
+}
+
+.infoList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.infoRow {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.infoRow:last-child {
+  border-bottom: none;
+}
+
+.infoRow dt {
+  margin: 0;
+  font-size: 16px;
+  letter-spacing: -1px;
+  color: var(--color-default-thin);
+  flex-shrink: 0;
+  max-width: 170px;
+  width: 100%;
+}
+
+.infoRow dd {
+  margin: 0;
+  color: var(--color-default);
+  text-align: right;
+  font-size: 18px;
+}
+
+.infoRow dd a {
+  color: var(--color-accent);
+}
+
+.infoRow dd a:hover {
+  text-decoration: underline;
+}
+
+/* Search Volume Global (внутри первой карточки) */
+.searchDetails {
+  margin-top: 22px;
+}
+
+.searchDetailsTitle {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--color-black);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 22px;
+}
+
+.searchDetailsIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-grid);
+  color: var(--color-default);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.blocksWrap {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 19px;
+}
+
+.searchCard {
+  padding: 20px;
+  text-align: left;
+  min-width: 140px;
+  min-height: 129px;
+}
+
+.searchCard .value {
+  display: block;
+  font-size: 33px;
+  font-weight: 600;
+  color: var(--color-default);
+  margin-bottom: 10px;
+}
+
+.searchCard .value.accent {
+  color: var(--color-accent);
+}
+
+.searchVolumeLabel {
+  font-size: 18px;
+  color: var(--color-default);
+}
+
+/* Пояснювальне вікно для іконки warningIco */
+.warningWrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.warningIco {
+  display: block;
+  width: 22px;
+  height: 22px;
+}
+
+.warningTooltip {
+  display: block;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 209px;
+  padding: 10px;
+  background: var(--color-default-medium);
+  border-radius: 20px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.2s, opacity 0.2s;
+  z-index: 20;
+  pointer-events: none;
+  box-shadow: var(--basic-shadow);
+}
+
+.tooltipText {
+  display: block;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--color-white);
+  white-space: normal;
+  text-align: center;
+}
+
+/* Десктоп: показувати при наведенні */
+.warningWrapper:hover .warningTooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Планшет (≤1024px): показувати тільки по кліку (клас .is-open додає JS) */
+@media (max-width: 1024px) {
+  .warningWrapper:hover .warningTooltip {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .warningWrapper.is-open .warningTooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+/* Обёртка списка с плавным раскрытием */
+.cardContent {
+  padding: 20px 20px 0 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  min-height: 0;
+  font-size: 16px;
+}
+
+.cardContent.empty {
+  padding: 20px 10px;
+}
+
+.cardContent.empty p {
+  margin: 0;
+  color: var(--color-default-thin);
+}
+
+.cardContent.empty span {
+  color: var(--color-default-thin);
+  letter-spacing: -1px;
+}
+
+.cardContent:not(.is-expanded) {
+  max-height: 170px;
+}
+
+.cardContent.is-expanded {
+  max-height: 100%;
+}
+
+/* Keyword planner */
+.keywordList {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  color: var(--color-default);
+}
+
+.keywordList li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  gap: 10px;
+}
+
+.keywordList .name {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.keywordList .name img {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+}
+
+/* Кнопка «Показать всё» только у карточек с раскрытием */
+.profileCard .showAllBtn {
+  width: 100%;
+  max-width: 169px;
+  padding: 7px;
+  margin: 20px auto 10px;
+  font-size: 16px;
+  background: var(--color-accent);
+  color: var(--color-white);
+  transition: all 0.3s ease;
+}
+
+.profileCard .showAllBtn:hover {
+  background: var(--color-accent-hover);
+}
+
+/* Карточка keyword без кнопки — список занимает доступное место */
+.profileCard--keyword:not(.profileCard--expandable) .keywordList {
+  margin-bottom: 0;
+}
+
+/* Скрыть кнопку, если пунктов мало (скрипт добавит класс) */
+.profileCard--expandable.profileCard--noExpand .showAllBtn {
+  display: none;
+}
+
+
+@media (max-width: 1024px) {
+  .profileWrap {
+    flex-direction: column;
+  }
+
+  .profileCardTitle {
+    font-size: 16px;
+  }
+
+  .searchDetails {
+    margin-top: 16px;
+  }
+
+  .profileTitle {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 568px) {
+  .profileWrap {
+    gap: 16px;
+  }
+
+  .profileWrap .rightGrid {
+    gap: 10px;
+  }
+
+  .infoCard {
+    padding: 15px 20px;
+  }
+
+  .searchDetailsTitle {
+    font-size: 19px;
+  }
+
+  .searchCard {
+    padding: 10px 20px;
+  }
+
+  .searchCard .value {
+    font-size: 30px;
+  }
+
+  .searchVolumeLabel {
+    font-size: 16px;
+  }
+
+  .profileCard {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .profileCard .showAllBtn {
+    max-width: 100%;
+  }
+}

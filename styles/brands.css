@@ -1,0 +1,233 @@
+/* Brands table module — стили только на табличные теги и обёртку */
+
+.brands {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 33px;
+}
+
+.brands .wrap {
+  padding: 18px 24px 24px;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.brands .wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.brands .wrap.mobile {
+  display: none;
+  padding: 5px;
+}
+
+/* Мобільні картки брендів */
+.brandCardsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  max-height: 510px;
+  overflow-y: auto;
+  padding: 5px 0;
+}
+
+.brandCardsList::-webkit-scrollbar {
+  display: none;
+}
+
+.brandCard {
+  border-radius: var(--radius-card);
+  padding: 10px 20px;
+}
+
+.brandCard:nth-child(odd) {
+  background: var(--color-bg-page-soft);
+}
+
+.brandCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.brandCardName {
+  font-size: 16px;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.brandCardName:hover {
+  text-decoration: underline;
+}
+
+.brandCardDate {
+  font-size: 14px;
+  color: var(--color-default-thin);
+  flex-shrink: 0;
+}
+
+.brandCardSection {
+  display: flex;
+  /* align-items: center; */
+  align-items: flex-end;
+  gap: 4px;
+  margin-bottom: 8px;
+  font-size: 14px;
+
+}
+
+.brandCardSection:last-child {
+  margin-bottom: 0;
+}
+
+.brandCardLabel {
+  display: block;
+  color: var(--color-default-thin);
+}
+
+.brandCardValue,
+.brandCardGeo {
+  color: var(--color-default);
+  margin: 0;
+}
+
+table {
+  width: 100%;
+  min-width: 1320px;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+}
+
+table thead tr:first-child th {
+  padding: 12px 14px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-default-thin);
+  text-align: left;
+  border: none;
+}
+
+table thead tr th:first-child {
+  border-radius: 18px 0 0 18px;
+}
+
+table thead tr th:last-child {
+  border-radius: 0 18px 18px 0;
+}
+
+table thead th button {
+  font-family: inherit;
+  font-size: 16px;
+  color: var(--color-default-thin);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+table thead th button:hover {
+  color: var(--color-accent);
+}
+
+table .warningTooltip {
+  bottom: unset;
+  top: 100%;
+}
+
+table thead th:first-child {
+  width: 240px;
+}
+
+table thead th:nth-child(2) {
+  min-width: 140px;
+  width: 310px;
+}
+
+table thead th:nth-child(4) {
+  min-width: 180px;
+}
+
+table tbody tr:nth-child(odd) td {
+  background: var(--color-bg-page-soft);
+}
+
+table tbody tr:nth-child(even) td {
+  background: var(--color-white);
+}
+
+table tbody td {
+  padding: 12px 14px;
+  font-size: 18px;
+  color: var(--color-default);
+  vertical-align: middle;
+  border: none;
+}
+
+
+table tbody td:first-child {
+  color: var(--color-default-soft);
+  border-radius: 25px 0 0 25px;
+}
+
+table tbody td:last-child {
+  border-radius: 0 25px 25px 0;
+}
+
+table tbody a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+table tbody a:hover {
+  text-decoration: underline;
+}
+
+table tbody td:nth-child(1) {
+  font-size: 16px;
+}
+
+.countryBlock {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  margin-right: 10px;
+}
+
+.countryBlock::last-child {
+  margin-right: 0;
+}
+
+.countryBlock img {
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+}
+
+
+@media (max-width: 768px) {
+  .brands .wrap.desktop {
+    display: none;
+  }
+
+  .brands .wrap.mobile {
+    display: block;
+  }
+
+  .countryBlock {
+    margin-right: 5px;
+    gap: 3px;
+  }
+
+  .countryBlock img {
+    width: 13px;
+    height: 13px;
+  }
+}

@@ -1,0 +1,92 @@
+/* Personal cabinet layout */
+
+.userProfileWrapper {
+  margin-top: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 33px;
+}
+
+.userProfileSidebar,
+.userProfileContent {
+    padding: 20px 30px;
+    border-radius: 50px;
+}
+
+.userProfileSidebar {
+  width: 100%;
+  max-width: 306px;
+}
+
+.userTitle {
+  margin: 0 0 14px;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  color: var(--color-default);
+}
+
+.menuList {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.menuLink {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 70px;
+  font-size: 18px;
+  color: var(--color-default);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.menuLink:hover {
+  background: #F0F1F5;
+}
+
+.menuLink.is-active {
+  background: #F0F1F5;
+}
+
+.userProfileContent {
+  width: 100%;
+  min-height: 729px;
+}
+
+.userContentBody {
+  min-height: 1px;
+}
+
+@media (max-width: 1024px) {
+  .userProfileLayout {
+    flex-direction: column;
+  }
+
+}
+
+@media (max-width: 768px) {
+    .userProfileWrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .userProfileSidebar,
+    .userProfileContent {
+        padding: 20px;
+    }
+
+    .userProfileSidebar {
+        min-width: 100%;
+    }
+
+    .userTitle {
+        font-size: 19px;
+    }
+
+    .menuLink {
+        font-size: 16px;
+    }
+}

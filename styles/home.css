@@ -1,0 +1,444 @@
+/* Homepage: hero, monitoring grid, latest news */
+
+/* ——— Block 1: Hero SEO iGaming ——— */
+.mainBanner {
+  margin-bottom: 33px;
+}
+
+.mainBanner .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 32px 40px;
+}
+
+.bannerContent {
+  max-width: 520px;
+  color: var(--color-default);
+}
+
+.bannerTitle {
+  margin: 0 0 16px;
+  font-size: 33px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+.bannerDesc {
+  margin: 0 0 24px;
+  font-size: 22px;
+}
+
+.mainBannerCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  border-radius: var(--radius-btn);
+  font-size: 17px;
+  color: var(--color-white);
+  background: linear-gradient(180deg, #a67aff 0%, var(--color-accent) 100%);
+  box-shadow: 0 14px 30px #F8F9FB;
+  text-decoration: none;
+  transition: filter 0.2s;
+}
+
+.mainBannerCta:hover {
+  filter: brightness(1.08);
+}
+
+.bannerVisual {
+  max-width: 702px;
+  max-height: 312px;
+}
+
+.bannerVisual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-inner);
+}
+
+/* ——— Block 2: Monitoring grid ——— */
+.monitoringWrap {
+  margin-bottom: 33px;
+}
+
+.monitoringWrap .wrap {
+  padding: 30px 50px;
+  color: var(--color-default);
+}
+
+.monitoringGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px 20px;
+}
+
+.innerWrap {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.monitoringCard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  min-width: 280px;
+  max-width: 607px;
+  padding: 25px 20px 20px;
+  background: var(--color-bg-soft);
+  border-radius: var(--radius-inner);
+  position: relative;
+}
+
+.monitoringCard > img {
+  width: 71px;
+  height: 71px;
+  object-fit: contain;
+}
+
+.monitorContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.monitorContent .cardTitle {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-default);
+  letter-spacing: -1px;
+}
+
+.monitorContent .cardText {
+  margin: 0;
+  font-size: 16px;
+  color: var(--color-default);
+  letter-spacing: -1px;
+}
+
+.statusWrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.statusWrap .statusBlock {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 8px;
+  background: #A795D014;
+  border-radius: 86px;
+}
+
+.statusBlock svg path {
+  fill: currentColor;
+}
+
+.statusWrap .statusBlock span {
+  font-size: 14px;
+  letter-spacing: -1px;
+}
+
+.statusWrap .statusBlock.blue {
+  color: #639FFF;
+}
+
+.statusWrap .statusBlock.purple {
+  color: var(--color-accent); 
+}
+
+.statusWrap .statusBlock.orange {
+  color: #FDBB33;
+}
+
+.popupBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-white);
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+}
+
+/* ——— Block 3: Latest news ——— */
+.newsWrap {
+  margin-bottom: 33px;
+}
+
+.newsWrap .wrap {
+  padding: 30px 50px;
+  color: var(--color-default);
+}
+
+.newsWrap .contentHeader {
+  text-align: center;
+}
+
+.newsList {
+  list-style: none;
+  margin: 0 0 30px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.newsItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  padding-right: 100px;
+  background: var(--color-bg-soft);
+  border-radius: var(--radius-card);
+  box-shadow: var(--basic-shadow);
+  position: relative;
+}
+
+.newsDate {
+  position: absolute;
+  right: 22px;
+  top: 20px;
+  font-size: 16px;
+  letter-spacing: -1px;
+  color: var(--color-default-thin);
+}
+
+.newsItemThumb {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  flex-shrink: 0;
+  max-width: 270px;
+  max-height: 185px;
+}
+
+.newsItemThumb img {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-card);
+  object-fit: cover;
+  object-position: top;
+  overflow: hidden;
+}
+
+.newsBody {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 823px;
+}
+
+.newsItemTitle {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--color-default);
+  letter-spacing: -1px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.newsItemTitle a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.newsItemTitle a:hover {
+  color: var(--color-accent);
+}
+
+.newsText {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.newsText p {
+  margin: 0;
+  font-size: 16px;
+  color: var(--color-default);
+  letter-spacing: -1px;
+  margin-bottom: 10px;
+}
+
+.newsText p:last-child {
+  margin-bottom: 0;
+}
+
+.newsItemLink {
+  padding: 9px 15px;
+  border-radius: var(--radius-btn);
+  font-size: 16px;
+  color: var(--color-white);
+  background: var(--color-accent);
+  text-decoration: none;
+  transition: filter 0.2s;
+  max-width: 153px;
+  text-align: center;
+  transition: all .3s ease;
+}
+
+.newsItemLink:hover {
+  background: var(--color-accent-hover);
+}
+
+
+.newsAllBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 215px;
+  justify-self: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: var(--radius-btn);
+  font-size: 17px;
+  color: var(--color-white);
+  background: var(--color-accent);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.newsAllBtn:hover {
+  background: var(--color-accent-hover);
+}
+
+.newsAllBtn svg path {
+  fill: currentColor;
+}
+
+@media (max-width: 1024px) {
+  .mainBanner .wrap {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .monitoringCard {
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .monitorContent {
+    gap: 5px;
+  }
+
+  .monitorContent .cardTitle,
+  .monitorContent .cardText {
+    font-size: 15px;
+  }
+
+  .bannerContent {
+    max-width: none;
+  }
+
+  .bannerVisual {
+    max-width: 100%;
+  }
+
+  .statusWrap {
+    position: relative;
+    top: unset;
+    right: unset;
+  }
+
+  .popupBtn {
+    align-self: flex-end;
+    position: relative;
+    bottom: unset;
+    right: unset;
+  }
+
+  .newsItemTitle {
+    font-size: 17px;
+  }
+
+  .newsItemLink {
+    font-size: 15px;
+  }
+
+  .newsItemThumb img {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainBanner .wrap,
+  .monitoringWrap .wrap,
+  .newsWrap .wrap {
+    padding: 20px;
+  }
+
+  .bannerTitle {
+    font-size: 30px;
+  }
+
+  .bannerDesc {
+    font-size: 19px;
+  }
+
+  .monitorinTitle,
+  .newsTitle {
+    font-size: 24px;
+  }
+
+  .monitoringGrid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .monitoringCard {
+    min-width: 100%;
+  }
+
+  .monitoringCard > img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .newsItem {
+    flex-direction: column;
+    padding-right: 0;
+  }
+
+  .newsDate {
+    position: unset;
+    font-size: 15px;
+  }
+
+  .newsItemThumb {
+    width: 100%;
+  }
+
+  .newsItemThumb img {
+    max-width: 100%;
+  }
+
+  .newsItemLink,
+  .newsAllBtn {
+    max-width: 100%;
+  }
+}
